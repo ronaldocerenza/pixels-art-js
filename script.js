@@ -59,7 +59,33 @@ const restoreStorage = () => {
   }
 };
 
+//div com id 'pixel-board' criada no html devido a erro no cypress
+
+// 6 - Adicione à página um quadro contendo 25 pixels.
+const pixels = (quantidade) => {
+  const pixelBoard = document.getElementById('pixel-board');
+  for (let index = 0; index < quantidade; index += 1) {
+    const pixel = document.createElement('div');
+    pixel.className = 'pixel';
+    pixelBoard.appendChild(pixel);
+  }
+};
+pixels(25);
+
+const pixelStyle = document.querySelectorAll('.pixel');
+for (let index = 0; index < pixelStyle.length; index += 1) {
+  pixelStyle[index].style.backgroundColor = 'white';
+  pixelStyle[index].style.border = '1px solid';
+  pixelStyle[index].style.width = '40px';
+  pixelStyle[index].style.height = '40px';
+}
+
+
+
+
+
+
+
 window.onload = () => {
   restoreStorage();
 }
-
