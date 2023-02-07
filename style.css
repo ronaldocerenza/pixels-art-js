@@ -1,23 +1,19 @@
+* {
+  border: 0px;
+}
+
+body div {
+  display: flex;
+  max-width: 500px fit-content;
+  align-content: center;
+}
+
 .color {
   border: 1px solid;
   border-color: black;
-  width: 20px;
-  height: 20px;
-}
-
-#black {
+  width: 50px;
+  height: 50px;
   background-color: black;
-}
-
-#red {
-  background-color: red;
-}
-
-#blue {
-  background-color: blue;
-}
-
-#green {
-  background-color: green;
+  margin: 2px 2px;
 }
 
