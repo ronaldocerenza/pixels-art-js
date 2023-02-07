@@ -37,7 +37,7 @@ const clickButton = () => {
 button.addEventListener('click', clickButton);
 
 // 5 - Implemente uma função usando localStorage para que a paleta de cores gerada aleatoriamente seja mantida após recarregar a página
-
+//funcao que salva no localStorage
 const saveStorage = () => {
   const colorPalette = {
     0: paletas[0].style.backgroundColor,
@@ -48,5 +48,18 @@ const saveStorage = () => {
   localStorage.setItem('colorPalette', JSON.stringify(colorPalette));
 };
 
+//funcao que restaura apartir do load
+const restoreStorage = () => {
+  const paletas = document.getElementsByClassName('color');
+  const restauraColor = JSON.parse(localStorage.getItem('colorPalette'));
+  if (restauraColor) {
+    for (let index = 1; index < paletas.length; index += 1) {
+      paletas[index].style.backgroundColor = restauraColor[index];
+    }
+  }
+};
 
+window.onload = () => {
+  restoreStorage();
+}
 
