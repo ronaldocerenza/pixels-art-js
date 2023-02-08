@@ -1,10 +1,17 @@
 * {
   border: 0px;
+
+}
+
+body {
+  background-image: url(./fotoFundo.jpg);
+  background-size: cover;
+  margin: auto;
+  max-width: fit-content;
 }
 
 body div {
-  max-width: 500px fit-content;
-  align-content: center;
+
 }
 
 #color-palette {

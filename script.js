@@ -75,7 +75,7 @@ const pixels = (col, linha) => {
   }
 }
 };
-pixels(5, 5);
+pixels(10, 10);
 
 // 7 - Faça com que cada pixel do quadro tenha largura e altura de 40 pixels e borda preta de 1 pixel de espessura.
 
@@ -113,9 +113,18 @@ const salvarPintura = [];
 
 for (let index = 0; index < pintar.length; index += 1) {
   pintar[index].addEventListener('click', (event) => {
-    const selected = document.querySelector('.selected');
-    const clickMouse = event.target;
-    clickMouse.style.backgroundColor = selected.style.backgroundColor;
+  const selected = document.querySelector('.selected');
+  const clickMouse = event.target;
+  
+  clickMouse.style.backgroundColor = selected.style.backgroundColor;
+    
+  const desenhoPixel = {
+    position: index,
+    color: clickMouse.style.backgroundColor,
+  };
+
+  salvarPintura.push(desenhoPixel);
+  localStorage.setItem('pixelBoard', JSON.stringify(salvarPintura));
   });
 }
 
@@ -130,8 +139,19 @@ const clickButtonLimpar = () => {
 
 buttonLimpar.addEventListener('click', clickButtonLimpar);
 
+// funacao para recarregar desenho
 
+const restorePixel = () => {
+const savedDesign = JSON.parse(localStorage.getItem('pixelBoard'));
+
+  if (savedDesign !== null) {
+    for (let index = 0; index < pintar.length; index += 1) {
+      pintar[index].style.backgroundColor = savedDesign[index];
+    }
+  }
+}
 
 window.onload = () => {
   restoreStorage();
+  restorePixel();
 }
