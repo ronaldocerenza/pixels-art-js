@@ -94,8 +94,18 @@ for (let index = 0; index < divFlex.length; index += 1) {
 }
 
 // 8 - Defina a cor preta como cor inicial da paleta de cores. Ao carregar a página a cor preta já deve estar selecionada para pintar os pixels
-const colorBlack = document.querySelector(".color");
-colorBlack.classList.add('selected');
+const colorSelected = document.querySelectorAll(".color");
+colorSelected[0].classList.add('selected');
+
+// 9 - Crie uma função para selecionar uma cor na paleta de cores.
+for (let index = 0; index < colorSelected.length; index += 1) {
+  colorSelected[index].addEventListener('click', (event) => {
+    const selected = document.querySelector('.selected');
+    selected.classList.remove('selected');
+    event.target.classList.add('selected');
+  });
+}
+
 
 
 
