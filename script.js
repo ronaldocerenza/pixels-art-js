@@ -93,7 +93,9 @@ for (let index = 0; index < divFlex.length; index += 1) {
   divFlex[index].style.display = 'flex';
 }
 
-
+// 8 - Defina a cor preta como cor inicial da paleta de cores. Ao carregar a página a cor preta já deve estar selecionada para pintar os pixels
+const colorBlack = document.querySelector(".color");
+colorBlack.classList.add('selected');
 
 
 

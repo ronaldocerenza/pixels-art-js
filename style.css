@@ -3,9 +3,12 @@
 }
 
 body div {
-  display: flex;
   max-width: 500px fit-content;
   align-content: center;
+}
+
+#color-palette {
+  display: flex;
 }
 
 .color {
@@ -17,9 +20,7 @@ body div {
   margin: 2px 2px;
 }
 
-/* .pixel {
-  background-color: brown;
-  width: 40px;
-  height: 40px;
-  border: 1px solid;
-} */
+#pixel-board {
+  max-width: fit-content;
+  
+}
