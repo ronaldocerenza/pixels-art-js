@@ -119,7 +119,16 @@ for (let index = 0; index < pintar.length; index += 1) {
   });
 }
 
+// 11 - Crie um botão que retorne a cor do quadro para a cor inicial.
+// botão criado no html
+const buttonLimpar = document.querySelector('#clear-board');
+const clickButtonLimpar = () => {
+  for (let index = 0; index < pintar.length; index += 1) {
+    pintar[index].style.backgroundColor = 'white';
+  }
+}
 
+buttonLimpar.addEventListener('click', clickButtonLimpar);
 
 
 
