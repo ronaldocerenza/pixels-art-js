@@ -107,6 +107,18 @@ for (let index = 0; index < colorSelected.length; index += 1) {
 }
 
 
+// 10 - Crie uma função que permita preencher um pixel do quadro com a cor selecionada na paleta de cores.
+const pintar = document.querySelectorAll('.pixel');
+const salvarPintura = [];
+
+for (let index = 0; index < pintar.length; index += 1) {
+  pintar[index].addEventListener('click', (event) => {
+    const selected = document.querySelector('.selected');
+    const clickMouse = event.target;
+    clickMouse.style.backgroundColor = selected.style.backgroundColor;
+  });
+}
+
 
 
 
