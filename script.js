@@ -61,16 +61,23 @@ const restoreStorage = () => {
 
 //div com id 'pixel-board' criada no html devido a erro no cypress
 
-// 6 - Adicione à página um quadro contendo 25 pixels.
-const pixels = (quantidade) => {
+// 6 - Adicione à página um quadro contendo 25 pixels sendo 5x5
+const pixels = (col, linha) => {
   const pixelBoard = document.getElementById('pixel-board');
-  for (let index = 0; index < quantidade; index += 1) {
+  for (let index1 = 0; index1 < col; index1 += 1) {
+    const pixel1 = document.createElement('div');
+    pixel1.className = 'flex';
+    pixelBoard.appendChild(pixel1);
+  for (let index = 0; index < linha; index += 1) {
     const pixel = document.createElement('div');
     pixel.className = 'pixel';
-    pixelBoard.appendChild(pixel);
+    pixel1.appendChild(pixel);
   }
+}
 };
-pixels(25);
+pixels(5, 5);
+
+// 7 - Faça com que cada pixel do quadro tenha largura e altura de 40 pixels e borda preta de 1 pixel de espessura.
 
 const pixelStyle = document.querySelectorAll('.pixel');
 for (let index = 0; index < pixelStyle.length; index += 1) {
@@ -78,6 +85,12 @@ for (let index = 0; index < pixelStyle.length; index += 1) {
   pixelStyle[index].style.border = '1px solid';
   pixelStyle[index].style.width = '40px';
   pixelStyle[index].style.height = '40px';
+}
+
+//colocar em linha
+const divFlex = document.querySelectorAll('.flex');
+for (let index = 0; index < divFlex.length; index += 1) {
+  divFlex[index].style.display = 'flex';
 }
 
 
