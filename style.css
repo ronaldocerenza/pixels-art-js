@@ -24,3 +24,7 @@ body {
   max-width: fit-content;
   
 }
+
+.pixel {
+  background-color: white;
+}
