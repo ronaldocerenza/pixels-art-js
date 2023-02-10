@@ -75,7 +75,7 @@ const pixels = (col, linha) => {
   }
 }
 };
-pixels(10, 10);
+pixels(5, 5);
 
 // 7 - Faça com que cada pixel do quadro tenha largura e altura de 40 pixels e borda preta de 1 pixel de espessura.
 
