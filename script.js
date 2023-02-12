@@ -124,7 +124,8 @@ for (let index = 0; index < pintar.length; index += 1) {
   };
 
   salvarPintura.push(desenhoPixel);
-  localStorage.setItem('pixelBoard', JSON.stringify(salvarPintura));
+  const pinturaPronta = document.querySelector('#pixel-board')
+  localStorage.setItem('pixelBoard', pinturaPronta.innerHTML);
   });
 }
 
@@ -139,19 +140,15 @@ const clickButtonLimpar = () => {
 
 buttonLimpar.addEventListener('click', clickButtonLimpar);
 
-// funacao para recarregar desenho
+// funcao para recarregar desenho
 
 const restorePixel = () => {
-const savedDesign = JSON.parse(localStorage.getItem('pixelBoard'));
-
-  if (savedDesign !== null) {
-    for (let index = 0; index < pintar.length; index += 1) {
-      pintar[index].style.backgroundColor = savedDesign[index];
-    }
+  const savedDesign = localStorage.getItem('pixelBoard');
+  const pinturaPronta = document.querySelector('#pixel-board')
+  pinturaPronta.innerHTML = savedDesign
   }
-}
 
 window.onload = () => {
   restoreStorage();
-  restorePixel();
+  // restorePixel();
 }

@@ -6,11 +6,13 @@
 body {
   background-image: url(./fotoFundo.jpg);
   background-size: cover;
+  max-width: fit-content;
+  justify-content: center;
 }
 
 #color-palette {
   display: flex;
-  flex-wrap: wrap;
+  margin: 20px 20px;
 }
 
 .color {
@@ -18,13 +20,15 @@ body {
   border-color: black;
   width: 40px;
   height: 40px;
+  margin: auto 5px;
+}
+
+.btn {
+  margin: 20px 20px;
+  max-width: fit-content;
+  justify-content: space-between;
 }
 
 #pixel-board {
-  max-width: fit-content;
-  
-}
-
-.pixel {
-  background-color: white;
+  margin: 20px 20px;
 }
