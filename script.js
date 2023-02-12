@@ -142,13 +142,16 @@ buttonLimpar.addEventListener('click', clickButtonLimpar);
 
 // funcao para recarregar desenho
 
-const restorePixel = () => {
+const pinturaPronta = document.querySelector('#pixel-board')
+
+function restorePixel() {
   const savedDesign = localStorage.getItem('pixelBoard');
-  const pinturaPronta = document.querySelector('#pixel-board')
-  pinturaPronta.innerHTML = savedDesign
+  if (savedDesign) {
+    pinturaPronta.innerHTML = savedDesign;
   }
+}
 
 window.onload = () => {
   restoreStorage();
-  // restorePixel();
+  restorePixel();
 }
