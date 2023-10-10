@@ -1,34 +1,62 @@
+/* usado para resetar o css do navegador */
 * {
-  border: 0px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+html, body {
+  height: 100%;
 }
 
 body {
-  background-image: url(./fotoFundo.jpg);
-  background-size: cover;
-  max-width: fit-content;
+  background-color: lightseagreen;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-#color-palette {
+.navbar, .container {
+  background-color: aqua;
+  width: 800px;
+  border-radius: 0.5rem;
+}
+
+.navbar {
+  padding: 1em;
+  margin-bottom: 1em;
   display: flex;
-  margin: 20px 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn, .btn-eraser, input {
+  height: 35px;
+  padding: 0 .25em;
 }
 
 .color {
-  border: 1px solid;
-  border-color: black;
-  width: 40px;
-  height: 40px;
-  margin: auto 5px;
+  padding: 0 .25em;
+  width: 10%;
+  margin: 0 1em;
 }
 
-.btn {
-  margin: 20px 20px;
-  max-width: fit-content;
-  justify-content: space-between;
+.container {
+  /* esta propriedade é usada para criar variáveis no css */
+  --size: 4;
+  height: 800px;
+  display: grid;
+  /* grid serve para criar um grid de elementos */
+  /* var serve para chamar uma variável no css */
+  grid-template-columns: repeat(var(--size), 1fr);
+  grid-template-rows: repeat(var(--size), 1fr);
+  gap: 3px;
+  padding: 3px;
 }
 
-#pixel-board {
-  margin: 20px 20px;
+.pixel {
+  background-color: #3d3d3d;
+  border-radius: .25rem;
 }

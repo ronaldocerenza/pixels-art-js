@@ -4,5 +4,7 @@
 
 💡 Veja o exemplo a seguir de como o projeto pode se parecer depois de pronto.
 
+![Veja um exemplo](art-with-pixels.gif)
+
 ## colocar imagem
 
