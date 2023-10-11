@@ -10,17 +10,19 @@ html, body {
 }
 
 body {
-  background-color: lightseagreen;
+  background-image: url(./fotoFundo.jpg);
+  background-size: cover;
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: end;
   flex-direction: column;
+  margin-right: 100px;
 }
 
 .navbar, .container {
   background-color: aqua;
-  width: 800px;
+  width: 600px;
   border-radius: 0.5rem;
 }
 
@@ -46,7 +48,7 @@ body {
 .container {
   /* esta propriedade é usada para criar variáveis no css */
   --size: 4;
-  height: 800px;
+  height: 600px;
   display: grid;
   /* grid serve para criar um grid de elementos */
   /* var serve para chamar uma variável no css */

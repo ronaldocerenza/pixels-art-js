@@ -62,4 +62,5 @@ eraserBtn.addEventListener('click', () => {
   color.value = '#3d3d3d';
 });
 
+// chamando a função populate
 populate(size);

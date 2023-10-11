@@ -4,7 +4,10 @@
 
 💡 Veja o exemplo a seguir de como o projeto pode se parecer depois de pronto.
 
-![Veja um exemplo](art-with-pixels.gif)
+## pixel-art
+![Veja um exemplo](foto.gif)
 
-## colocar imagem
+## brinque um pouco com deploy
+
+
 
